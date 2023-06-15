@@ -11,19 +11,24 @@ const Header = () => {
   const cartValue = useSelector((state: RootState) => state.cart.totalQuantity);
   return (
     <div className="flex justify-between items-center py-6 px-28">
-      <Image src={logo} alt="logo" className="w-40" />
+      <Link href={"/"}>
+        <Image src={logo} alt="logo" className="w-40" />
+      </Link>
       <ul className="flex gap-x-10">
         <li className="text-lg">
-          <Link href={"/"}>Female</Link>
+          <Link href={"category/female"}>Female</Link>
         </li>
         <li className="text-lg">
-          <Link href={"/"}>Male</Link>
+          <Link href={"category/male"}>Male</Link>
         </li>
         <li className="text-lg">
-          <Link href={"/"}>Kids</Link>
+          <Link href={"category/kids"}>Kids</Link>
         </li>
         <li className="text-lg">
-          <Link href={"/"}>All Products</Link>
+          <Link href={"category/sports"}>Sports</Link>
+        </li>
+        <li className="text-lg">
+          <Link href={"products"}>All Products</Link>
         </li>
       </ul>
       {/* <input /> */}

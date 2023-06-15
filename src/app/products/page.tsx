@@ -1,12 +1,11 @@
-import ProductCard from "@/components/ProductCard";
 import { Products } from "@/utils/mock";
+import ProductCard from "@/components/ProductCard";
 import { StaticImageData } from "next/image";
 
-const ProductList = () => {
-  const productChecks = Products.slice(0, 3);
+const AllProducts = () => {
   return (
-    <div className="flex justify-evenly mt-16 py-10">
-      {productChecks.map((product) => (
+    <div className="flex justify-evenly mt-16 py-10 flex-wrap">
+      {Products.map((product) => (
         <ProductCard
           key={product.id}
           title={product.name}
@@ -19,5 +18,4 @@ const ProductList = () => {
     </div>
   );
 };
-
-export default ProductList;
+export default AllProducts;

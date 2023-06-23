@@ -32,9 +32,12 @@ export default function Page({ params }: { params: { id: string } }) {
               <h3 className="mt-6 text-xs font-semibold">SELECT SIZE</h3>
               {/* Sizes */}
               <div className="flex gap-x-3">
-                {sizes.map((item) => {
+                {sizes.map((item, i) => {
                   return (
-                    <div className="w-6 h-6 mt-2 duration-300 border rounded-full center hover:shadow-xl">
+                    <div
+                      key={i}
+                      className="w-6 h-6 mt-2 duration-300 border rounded-full center hover:shadow-xl"
+                    >
                       <span className="text-[10px] font-semibold text-center text-gray-600">
                         {item}
                       </span>
@@ -50,7 +53,9 @@ export default function Page({ params }: { params: { id: string } }) {
               {/* Add to Cart */}
               <div className="flex items-center mt-5 gap-x-4">
                 <AddToCart />
-                <h2 className="text-2xl font-bold">${product.price.toFixed(2)}</h2>
+                <h2 className="text-2xl font-bold">
+                  ${product.price.toFixed(2)}
+                </h2>
               </div>
             </div>
           </div>

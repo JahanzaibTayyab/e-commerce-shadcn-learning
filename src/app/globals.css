@@ -79,3 +79,9 @@
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
+
+@layer components {
+  .center {
+    @apply flex items-center justify-center
+  }
+}
